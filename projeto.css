@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+}
+
+/* Barra superior fixa */
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(245, 245, 245, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 76, 164, 0.15);
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background-color: #FFFFFF;
+  color: #004CA4;
+  border: 1px solid rgba(0, 76, 164, 0.35);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: rgba(0, 76, 164, 0.08);
+  border-color: #004CA4;
+  transform: translateX(-2px);
+}
+
+.project-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #004CA4;
+}
+
+/* Container das imagens do case em largura total */
+.case-container {
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+.case-slice {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Rodapé de navegação entre projetos */
+.bottom-nav {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 56px 48px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 76, 164, 0.15);
+}
+
+/* Botões estilo Contato (borda azul + hover azul leve) */
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 28px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 76, 164, 0.35);
+  border-radius: 999px;
+  text-decoration: none;
+  color: #004CA4;
+  transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 76, 164, 0.08);
+  border-color: #004CA4;
+  transform: translateY(-2px);
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-btn.next .nav-text {
+  text-align: right;
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #004CA4;
+  letter-spacing: 0.02em;
+}
+
+.nav-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #004CA4;
+  letter-spacing: 0.03em;
+}
+
+.nav-arrow {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #004CA4;
+  transition: transform 0.25s ease;
+}
+
+.nav-btn.prev:hover .nav-arrow {
+  transform: translateX(-4px);
+}
+
+.nav-btn.next:hover .nav-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .top-bar {
+    padding: 12px 16px;
+  }
+
+  .bottom-nav {
+    padding: 40px 20px 56px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-btn.next .nav-text {
+    text-align: left;
+  }
+}
